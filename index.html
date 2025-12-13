@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammrund | Real Estate Owerri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Fade In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        /* Hide scrollbar when modal is open */
+        body.modal-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div id="logo-text" class="text-2xl font-bold text-white">
+                        Hamm<span class="text-green-500">rund</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link font-medium text-white/90 hover:text-green-500 transition-colors">Home</a>
+                    <a href="#about" class="nav-link font-medium text-white/90 hover:text-green-500 transition-colors">About</a>
+                    <a href="#properties" class="nav-link font-medium text-white/90 hover:text-green-500 transition-colors">Properties</a>
+                    <a href="#agents" class="nav-link font-medium text-white/90 hover:text-green-500 transition-colors">Agents</a>
+                    <a href="#contact" class="nav-link font-medium text-white/90 hover:text-green-500 transition-colors">Contact</a>
+                    <button class="bg-green-600 text-white px-6 py-2.5 rounded-full font-medium hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg">
+                        List Property
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="mobile-link block px-3 py-4 text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 border-b border-gray-100">Home</a>
+                <a href="#about" class="mobile-link block px-3 py-4 text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 border-b border-gray-100">About</a>
+                <a href="#properties" class="mobile-link block px-3 py-4 text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 border-b border-gray-100">Properties</a>
+                <a href="#agents" class="mobile-link block px-3 py-4 text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50 border-b border-gray-100">Agents</a>
+                <a href="#contact" class="mobile-link block px-3 py-4 text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50">Contact</a>
+                <div class="pt-4">
+                    <button class="w-full bg-green-600 text-white px-4 py-3 rounded-lg font-medium">List Your Property</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+      
+    <!-- Hero Section -->
+    <div id="home" class="relative h-screen min-h-[600px] flex items-center justify-center bg-gray-900">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1598300056193-45564879b29e?auto=format&fit=crop&q=80&w=2000" alt="Owerri City View" class="w-full h-full object-cover opacity-60">
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Find Your Comfort in <span class="text-green-500">Owerri</span>
+            </h1>
+            <p class="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                Discover luxury homes, affordable lands, and modern apartments in the heart of Imo State.
+            </p>
+            
+            <div class="bg-white p-2 rounded-lg shadow-2xl max-w-2xl mx-auto flex flex-col md:flex-row gap-2">
+                <div class="flex-1 relative">
+                    <svg class="absolute left-4 top-3.5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <input type="text" id="search-input" placeholder="Search New Owerri, Ikenegbu, Wetheral..." class="w-full pl-12 pr-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <button class="bg-green-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-green-700 transition-colors flex items-center justify-center gap-2">
+                    Search 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">Why Choose Hammrund?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">The premier real estate agency in Imo State. We make acquiring property in Owerri secure and stress-free.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Prime Locations</h3>
+                    <p class="text-gray-500 leading-relaxed">Access exclusive listings in New Owerri, World Bank, and Ikenegbu.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Verified Properties</h3>
+                    <p class="text-gray-500 leading-relaxed">Every land and building is thoroughly verified to ensure safe transactions.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.03 12.03 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Local Experts</h3>
+                    <p class="text-gray-500 leading-relaxed">Our team knows every corner of Imo State to guide your investment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Properties Grid -->
+    <section id="properties" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <span class="text-green-600 font-semibold tracking-wider uppercase text-sm">Best in Imo</span>
+                <h2 class="text-3xl font-bold text-gray-900 mt-2">Latest Listings</h2>
+            </div>
+            <button class="hidden md:flex items-center text-green-600 font-semibold hover:text-green-800">
+                View All Properties 
+                <svg class="ml-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+        </div>
+
+        <!-- Grid Container -->
+        <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Properties injected via JS -->
+        </div>
+        
+        <button class="md:hidden w-full mt-8 py-3 border border-gray-300 rounded-lg font-semibold text-gray-700">
+            View All Properties
+        </button>
+    </section>
+
+    <!-- Agents Section -->
+    <div id="agents" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl mb-12">Meet Our Agents</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Agent 1 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" alt="Chinedu Okafor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Chinedu Okafor</h3>
+                        <p class="text-green-600 font-medium">Senior Sales Associate</p>
+                    </div>
+                </div>
+                <!-- Agent 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="Amaka Nnadi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Amaka Nnadi</h3>
+                        <p class="text-green-600 font-medium">Property Consultant</p>
+                    </div>
+                </div>
+                <!-- Agent 3 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800" alt="Emeka Ugochukwu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Emeka Ugochukwu</h3>
+                        <p class="text-green-600 font-medium">Investment Advisor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="bg-green-700 py-20">
+        <div class="max-w-4xl mx-auto px-4 text-center text-white">
+            <h2 class="text-3xl font-bold mb-6">Looking to sell your land or property?</h2>
+            <p class="text-green-100 text-lg mb-8">
+                Hammrund connects you with verified buyers in Imo State. Fast transactions, zero stress.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-green-700 px-8 py-3.5 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+                    Contact an Agent
+                </button>
+                <button class="bg-green-800 text-white border border-green-500 px-8 py-3.5 rounded-lg font-bold hover:bg-green-900 transition-colors">
+                    Browse Listings
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="text-2xl font-bold mb-6">
+                        Hamm<span class="text-green-500">rund</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Your trusted partner for Real Estate in Imo State. Connecting you with the best properties in the Heartland.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="#about" class="hover:text-green-500 transition-colors">About Us</a></li>
+                        <li><a href="#properties" class="hover:text-green-500 transition-colors">Properties</a></li>
+                        <li><a href="#agents" class="hover:text-green-500 transition-colors">Agents</a></li>
+                        <li><a href="#contact" class="hover:text-green-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="#" class="hover:text-green-500 transition-colors">Property Sales</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition-colors">Rentals</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition-colors">Land Surveying</a></li>
+                        <li><a href="#" class="hover:text-green-500 transition-colors">Property Management</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Plot 5, Wetheral Road, Owerri, Imo State
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.03 12.03 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            +234 803 123 4567
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            info@hammrund.ng
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Hammrund Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Gallery Modal -->
+    <div id="gallery-modal" class="hidden fixed inset-0 z-[100] bg-black bg-opacity-95 flex items-center justify-center animate-fade-in">
+        <button onclick="closeGallery()" class="absolute top-6 right-6 text-white hover:text-green-400 z-50 flex items-center gap-2 bg-gray-900/80 px-6 py-3 rounded-full border border-gray-700 font-semibold transition-all hover:scale-105">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 18 18"/></svg>
+             Back to Home
+        </button>
+
+        <button onclick="prevImage()" class="absolute left-4 md:left-8 text-white hover:text-green-400 p-4 bg-gray-900/50 rounded-full hover:bg-gray-800 transition-all z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+
+        <div class="max-w-7xl w-full h-full flex flex-col items-center justify-center p-4 md:p-12">
+            <div class="relative w-full h-[80vh] flex items-center justify-center">
+                <img id="gallery-image" src="" alt="Property View" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl transition-opacity duration-300">
+            </div>
+            
+            <div class="mt-6 text-center">
+                <h3 id="gallery-title" class="text-2xl font-bold text-white mb-2"></h3>
+                <p id="gallery-counter" class="text-gray-400 font-medium"></p>
+                <!-- Dots container -->
+                <div id="gallery-dots" class="flex gap-2 justify-center mt-4"></div>
+            </div>
+        </div>
+
+        <button onclick="nextImage()" class="absolute right-4 md:right-8 text-white hover:text-green-400 p-4 bg-gray-900/50 rounded-full hover:bg-gray-800 transition-all z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+    </div>
+
+    <!-- Inquiry Modal -->
+    <div id="inquiry-modal" class="hidden fixed inset-0 z-[100] bg-black bg-opacity-70 flex items-center justify-center p-4 animate-fade-in">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-2xl">
+            <button onclick="closeInquiry()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 18 18"/></svg>
+            </button>
+            
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Inquire about Property</h3>
+            <p class="text-sm text-gray-600 mb-5">
+                You are interested in: <span id="inquiry-property-title" class="font-semibold text-green-600"></span>
+            </p>
+            
+            <form onsubmit="submitInquiry(event)" class="space-y-3">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <input type="text" required class="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:ring-1 focus:ring-green-500 focus:border-green-500 outline-none transition-all" placeholder="Full Name">
+                    </div>
+                    <div>
+                        <input type="tel" class="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:ring-1 focus:ring-green-500 focus:border-green-500 outline-none transition-all" placeholder="Phone Number">
+                    </div>
+                </div>
+                
+                <div>
+                    <input type="email" required class="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:ring-1 focus:ring-green-500 focus:border-green-500 outline-none transition-all" placeholder="Email Address">
+                </div>
+                
+                <div>
+                    <textarea rows="2" class="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:ring-1 focus:ring-green-500 focus:border-green-500 outline-none transition-all resize-none" placeholder="I am interested in this property..."></textarea>
+                </div>
+                
+                <div class="flex gap-3 mt-4">
+                    <button type="button" onclick="closeInquiry()" class="flex-1 bg-gray-100 text-gray-700 font-semibold py-2.5 rounded-lg hover:bg-gray-200 transition-colors text-sm">
+                        Cancel
+                    </button>
+                    <button type="submit" class="flex-1 bg-green-600 text-white font-semibold py-2.5 rounded-lg hover:bg-green-700 transition-colors shadow-lg text-sm">
+                        Send Inquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- Data ---
+        const PROPERTIES = [
+            {
+                id: 1,
+                title: "Luxury Duplex in New Owerri",
+                price: "₦185,000,000",
+                location: "New Owerri, Imo State",
+                beds: 5, baths: 6, sqft: 4500,
+                tag: "For Sale",
+                images: [
+                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1600566752355-35792bedcfe1?auto=format&fit=crop&q=80&w=1600"
+                ]
+            },
+            {
+                id: 2,
+                title: "Serviced Apartment (Ikenegbu)",
+                price: "₦3,500,000/yr",
+                location: "Ikenegbu Layout, Owerri",
+                beds: 3, baths: 3, sqft: 1800,
+                tag: "For Rent",
+                images: [
+                    "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1484154218962-a1c00207099b?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&q=80&w=1600"
+                ]
+            },
+            {
+                id: 3,
+                title: "Detached Bungalow",
+                price: "₦65,000,000",
+                location: "World Bank Housing, Owerri",
+                beds: 4, baths: 4, sqft: 2500,
+                tag: "Hot Deal",
+                images: [
+                    "https://images.unsplash.com/photo-1599809275372-b4036411015d?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1599809275372-b4036411015d?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80&w=1600"
+                ]
+            },
+            {
+                id: 4,
+                title: "Modern Villa with BQ",
+                price: "₦250,000,000",
+                location: "Aladinma, Owerri",
+                beds: 6, baths: 7, sqft: 5000,
+                tag: "Exclusive",
+                images: [
+                    "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1600596542815-e32c215dd864?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&q=80&w=1600"
+                ]
+            },
+            {
+                id: 5,
+                title: "Commercial Space / Office",
+                price: "₦8,000,000/yr",
+                location: "Wetheral Road, Owerri",
+                beds: 0, baths: 2, sqft: 1200,
+                tag: "Commercial",
+                images: [
+                    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1600"
+                ]
+            },
+            {
+                id: 6,
+                title: "Unfinished Estate Plot",
+                price: "₦15,000,000",
+                location: "Egbu Road, Owerri",
+                beds: 0, baths: 0, sqft: 6000,
+                tag: "Land",
+                images: [
+                    "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1516156008625-3a9d60da9205?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1464851707681-f9d5fdaccea8?auto=format&fit=crop&q=80&w=1600",
+                    "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=1600"
+                ]
+            }
+        ];
+
+        // --- Render Logic ---
+        function renderProperties(searchTerm = "") {
+            const grid = document.getElementById('properties-grid');
+            grid.innerHTML = "";
+            
+            const filtered = PROPERTIES.filter(p => 
+                p.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                p.location.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-20 text-gray-500">No properties found.</div>`;
+                return;
+            }
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer border border-gray-100";
+                card.innerHTML = `
+                    <div class="relative h-64 overflow-hidden" onclick="openGallery(${p.id})">
+                        <img src="${p.images[0]}" alt="${p.title}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">${p.tag}</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/></svg> ${p.images.length} Photos
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <p class="text-white text-2xl font-bold">${p.price}</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-1">${p.title}</h3>
+                                <div class="flex items-center text-gray-500 text-sm">
+                                    <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    ${p.location}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center py-4 border-t border-gray-100 text-gray-600">
+                            <div class="flex items-center gap-2">
+                                <svg class="text-green-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+                                <span class="font-medium">${p.beds} <span class="text-xs text-gray-400">Beds</span></span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="text-green-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-1.5C3.5 2 2.5 3 4.5 5c0 0-2 2-1 3.5a1.5 1.5 0 0 0 1 1.5c1 0 2.5-1 3.5-3"/><path d="M10 21h10a4 4 0 0 0 4-4V7a2 2 0 0 0-2-2h-6l-1 1-2-6-3 1"/><path d="M2 10v11"/><path d="M4 10h16a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Z"/></svg>
+                                <span class="font-medium">${p.baths} <span class="text-xs text-gray-400">Baths</span></span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="text-green-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/></svg>
+                                <span class="font-medium">${p.sqft} <span class="text-xs text-gray-400">sqft</span></span>
+                            </div>
+                        </div>
+                        <button onclick="event.stopPropagation(); openInquiry(${p.id})" class="w-full mt-4 py-3 rounded-lg border-2 border-green-600 text-green-600 font-semibold hover:bg-green-600 hover:text-white transition-colors">
+                            Inquire about Property
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // --- Search Logic ---
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            renderProperties(e.target.value);
+        });
+
+        // --- Navigation Logic ---
+        const navbar = document.getElementById('navbar');
+        const logoText = document.getElementById('logo-text');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-white', 'shadow-md', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+                logoText.classList.remove('text-white');
+                logoText.classList.add('text-green-900');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white/90');
+                    link.classList.add('text-gray-700');
+                });
+                mobileMenuBtn.classList.remove('text-white');
+                mobileMenuBtn.classList.add('text-gray-800');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-6');
+                navbar.classList.remove('bg-white', 'shadow-md', 'py-4');
+                logoText.classList.add('text-white');
+                logoText.classList.remove('text-green-900');
+                navLinks.forEach(link => {
+                    link.classList.add('text-white/90');
+                    link.classList.remove('text-gray-700');
+                });
+                mobileMenuBtn.classList.add('text-white');
+                mobileMenuBtn.classList.remove('text-gray-800');
+            }
+        });
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- Gallery Logic ---
+        let currentGalleryProperty = null;
+        let currentImageIndex = 0;
+
+        function openGallery(id) {
+            currentGalleryProperty = PROPERTIES.find(p => p.id === id);
+            if (!currentGalleryProperty) return;
+            currentImageIndex = 0;
+            updateGalleryUI();
+            document.getElementById('gallery-modal').classList.remove('hidden');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeGallery() {
+            document.getElementById('gallery-modal').classList.add('hidden');
+            document.body.classList.remove('modal-open');
+        }
+
+        function updateGalleryUI() {
+            document.getElementById('gallery-image').src = currentGalleryProperty.images[currentImageIndex];
+            document.getElementById('gallery-title').innerText = currentGalleryProperty.title;
+            document.getElementById('gallery-counter').innerText = `Image ${currentImageIndex + 1} of ${currentGalleryProperty.images.length}`;
+            
+            // Update dots
+            const dotsContainer = document.getElementById('gallery-dots');
+            dotsContainer.innerHTML = '';
+            currentGalleryProperty.images.forEach((_, idx) => {
+                const dot = document.createElement('button');
+                dot.className = `w-3 h-3 rounded-full transition-all ${idx === currentImageIndex ? 'bg-green-500 scale-125' : 'bg-gray-600 hover:bg-gray-500'}`;
+                dot.onclick = () => { currentImageIndex = idx; updateGalleryUI(); };
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function nextImage() {
+            if (!currentGalleryProperty) return;
+            currentImageIndex = (currentImageIndex + 1) % currentGalleryProperty.images.length;
+            updateGalleryUI();
+        }
+
+        function prevImage() {
+            if (!currentGalleryProperty) return;
+            currentImageIndex = (currentImageIndex - 1 + currentGalleryProperty.images.length) % currentGalleryProperty.images.length;
+            updateGalleryUI();
+        }
+
+        // --- Inquiry Logic ---
+        let currentInquiryProperty = null;
+
+        function openInquiry(id) {
+            currentInquiryProperty = PROPERTIES.find(p => p.id === id);
+            if (!currentInquiryProperty) return;
+            document.getElementById('inquiry-property-title').innerText = currentInquiryProperty.title;
+            document.getElementById('inquiry-modal').classList.remove('hidden');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeInquiry() {
+            document.getElementById('inquiry-modal').classList.add('hidden');
+            document.body.classList.remove('modal-open');
+        }
+
+        function submitInquiry(e) {
+            e.preventDefault();
+            alert(`Inquiry sent for ${currentInquiryProperty.title}! We will contact you shortly.`);
+            closeInquiry();
+        }
+
+        // Initialize
+        renderProperties();
+    </script>
+</body>
+</html>
