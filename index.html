@@ -1,62 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<title>8 Ball Pool | Play Free HTML5 Games No ADS</title>
-		<meta name="author" content="Nathan Prinsley"/>
-        <meta property="og:title" content="8 Ball Pool | Play Free HTML5 Games No ADS"/>
-        <meta name="google" content="notranslate" />
-				
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="8 Ball Pool | Play Free HTML5 Games No ADS" />
-        <meta name="twitter:image:src" content="http://nathanprinsley-games.prinsh.com/NathanPrinsleyGames/8ballpool/nathanprinsley.jpg"/><meta property="og:image" content="http://nathanprinsley-games.prinsh.com/NathanPrinsleyGames/8ballpool/nathanprinsley.jpg"/>				<link rel="stylesheet" type="text/css" href="https://games.prinsh.com/content/themes/default/style/bootstrap.min.css?nathanprinsley97" />
-		<link rel="stylesheet" type="text/css" href="https://games.prinsh.com/content/themes/default/style/jquery-comments.css" />
-		<link rel="stylesheet" type="text/css" href="https://games.prinsh.com/content/themes/default/style/user.css" />
-		<link rel="stylesheet" type="text/css" href="https://games.prinsh.com/content/themes/default/style/style.css?nathanprinsley97" />
-		<link rel="stylesheet" type="text/css" href="https://games.prinsh.com/content/themes/default/style/custom.css" />
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link rel="icon" type="image/x-icon" href="https://games.prinsh.com/favicon.ico"/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairby Sonita - Luxury Checkout</title>
+    <!-- Professional Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- 🎨 CONFIGURATION --- */
+        :root {
+            --primary: #D81B60;
+            --accent: #F06292;
+            --accent-dark: #AD1457;
+            --bg-body: #FDF2F8;
+            --bg-card: #FFFFFF;
+            --bg-secondary: #FCE4EC;
+            --text-main: #4A148C;
+            --text-muted: #6D4C41;
+            --container-width: 1280px;
+            --radius-md: 12px;
+        }
+
+        /* --- Base Styles --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-body); color: var(--text-main); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        button { cursor: pointer; border: none; outline: none; background: none; font-family: inherit; }
+        .hidden { display: none !important; }
+
+        /* --- Header & Top Bar --- */
+        .top-bar {
+            background-color: var(--primary);
+            color: white;
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 8px; /* Reduced padding */
+            font-weight: 500;
+        }
+
+        header {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--bg-secondary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(216, 27, 96, 0.05);
+        }
+
+        .navbar {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 1rem 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 10px; cursor: pointer; }
+        .logo-mark { width: 32px; height: 32px; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 18px; }
+
+        .nav-menu { display: flex; gap: 32px; }
+        .nav-menu a { font-weight: 600; color: var(--text-muted); font-size: 0.95rem; }
+        .nav-menu a:hover { color: var(--primary); }
+
+        .cart-btn { position: relative; padding: 8px; color: var(--primary); transition: transform 0.2s; }
+        .cart-btn:hover { transform: scale(1.1); }
+        .cart-badge { position: absolute; top: -2px; right: -2px; background: var(--accent); color: white; font-size: 0.75rem; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; border: 2px solid white; }
+
+        /* --- Shop View Styles --- */
+        .hero { background: linear-gradient(180deg, var(--bg-secondary) 0%, #FFFFFF 100%); padding: 80px 24px; text-align: center; }
+        .hero h1 { font-size: 3rem; font-weight: 800; color: var(--primary); line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px; max-width: 600px; margin: 0 auto 30px; }
         
-        <style>
-            /* Overrides to ensure full screen app experience */
-            html, body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                overflow: hidden; /* Prevents scrollbars */
-                background-color: #000 !important; /* Removes white background */
-            }
-            .game-iframe {
-                position: fixed;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                border: none;
-                margin: 0;
-                padding: 0;
-                display: block;
-                z-index: 999999;
-            }
-        </style>
-	</head>
-	<body id="page-top" translate="no">
+        .btn-primary { background: var(--primary); color: white; padding: 16px 40px; border-radius: 50px; font-weight: 600; font-size: 1rem; box-shadow: 0 10px 25px -5px rgba(216, 27, 96, 0.3); display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn-primary:hover { transform: translateY(-3px); background: var(--accent-dark); }
 
-        <iframe class="game-iframe" id="game-area" src="https://nathanprinsley-games.prinsh.com/NathanPrinsleyGames/8ballpool/index.html" scrolling="none" frameborder="0" allowfullscreen></iframe>
+        .section-container { max-width: var(--container-width); margin: 60px auto; padding: 0 24px; }
+        .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; border-bottom: 2px solid var(--bg-secondary); padding-bottom: 15px; }
+        .section-title { font-size: 2rem; color: var(--text-main); }
 
-        <script type="text/javascript" src="https://games.prinsh.com/content/themes/default/js/jquery-3.6.2.min.js"></script>
-	<script type="text/javascript" src="https://games.prinsh.com/content/themes/default/js/lazysizes.min.js"></script>
-	<script type="text/javascript" src="https://games.prinsh.com/content/themes/default/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://games.prinsh.com/js/jquery-comments.min.js"></script>
-	<script type="text/javascript" src="https://games.prinsh.com/content/themes/default/js/script.js"></script>
-	<script type="text/javascript" src="https://games.prinsh.com/content/themes/default/js/custom.js"></script>
-	<script type="text/javascript" src="https://games.prinsh.com/js/stats.js"></script>
-	  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"cd140defba19429a95c6b057f5f7a21d","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+        
+        .card { background: var(--bg-card); border-radius: var(--radius-md); overflow: hidden; border: 1px solid transparent; transition: all 0.4s ease; display: flex; flex-direction: column; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(216, 27, 96, 0.15); }
+        .card-img-box { height: 320px; position: relative; overflow: hidden; background: #f0f0f0; }
+        .card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .card:hover .card-img { transform: scale(1.05); }
+        .card-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+        .card-cat { font-size: 0.7rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+        .card-title { font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 5px; }
+        .card-price { font-size: 1.2rem; color: var(--primary); font-weight: 600; margin-bottom: 15px; }
+        
+        .btn-card { margin-top: auto; width: 100%; padding: 12px; background: white; border: 2px solid var(--primary); border-radius: 8px; font-weight: 700; color: var(--primary); transition: all 0.2s; text-transform: uppercase; font-size: 0.85rem; }
+        .btn-card:hover { background: var(--primary); color: white; }
+
+        /* --- Checkout View Styles --- */
+        #checkout-view { max-width: 1000px; margin: 40px auto; padding: 0 24px; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        .checkout-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; margin-top: 30px; }
+        .checkout-form, .order-summary { background: white; padding: 30px; border-radius: var(--radius-md); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .checkout-form h2, .order-summary h2 { color: var(--text-main); margin-bottom: 20px; font-size: 1.5rem; border-bottom: 1px solid var(--bg-secondary); padding-bottom: 10px; }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-muted); font-size: 0.9rem; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; outline: none; transition: 0.3s; }
+        .form-group input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(216, 27, 96, 0.1); }
+
+        .cart-item { display: flex; gap: 15px; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #f0f0f0; }
+        .cart-item img { width: 60px; height: 60px; object-fit: cover; border-radius: 8px; }
+        .item-details h4 { font-size: 0.95rem; color: var(--text-main); margin-bottom: 4px; }
+        .item-details p { font-size: 0.9rem; color: var(--primary); font-weight: 600; }
+        
+        .total-row { display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 800; margin-top: 20px; color: var(--text-main); padding-top: 15px; border-top: 2px solid var(--bg-secondary); }
+        
+        .btn-checkout { width: 100%; background: var(--primary); color: white; padding: 15px; border-radius: 8px; font-weight: 700; font-size: 1rem; margin-top: 20px; transition: 0.3s; }
+        .btn-checkout:hover { background: var(--accent-dark); }
+        .btn-back { display: inline-flex; align-items: center; gap: 5px; color: var(--text-muted); font-weight: 600; margin-bottom: 20px; cursor: pointer; }
+        .btn-back:hover { color: var(--primary); }
+
+        /* --- Compact Footer --- */
+        footer {
+            background: var(--primary);
+            color: #FCE4EC;
+            padding: 40px 24px 20px; /* Reduced Top/Bottom Padding */
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 30px; /* Reduced gap */
+            margin-bottom: 30px;
+        }
+
+        .footer-brand h4 { color: white; font-size: 1.3rem; font-weight: 800; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .footer-col h5 { color: white; margin-bottom: 15px; font-size: 1rem; }
+        .footer-col ul li { margin-bottom: 8px; font-size: 0.9rem; } /* Compact list */
+        .footer-col ul li a:hover { color: white; text-decoration: underline; }
+
+        .copyright { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.85rem; }
+
+        /* Toast & Mobile */
+        #toast { position: fixed; bottom: 30px; right: 30px; background: var(--text-main); color: white; padding: 16px 24px; border-radius: var(--radius-md); transform: translateY(100px); opacity: 0; transition: all 0.4s; z-index: 1002; display: flex; align-items: center; gap: 12px; font-weight: 600; }
+        #toast.show { transform: translateY(0); opacity: 1; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .checkout-grid, .location-grid, .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .nav-menu { display: none; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .card-img-box { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        🚚 Fast Delivery across Lagos • 🛡️ Official Retailer
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <div class="navbar">
+            <div class="logo" onclick="toggleView('shop')">
+                <div class="logo-mark">H</div>
+                HAIRBY SONITA
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" onclick="toggleView('shop'); return false;">Home</a>
+                <a href="#collection" onclick="toggleView('shop')">Collection</a>
+                <a href="#location" onclick="toggleView('shop')">Visit Us</a>
+            </nav>
+
+            <!-- Active Cart Button -->
+            <div class="cart-btn" id="cart-btn" onclick="toggleView('checkout')">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span class="cart-badge" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- SHOP VIEW -->
+    <main id="shop-view">
+        <section class="hero">
+            <h1>Redefining Luxury<br>Style in Lagos.</h1>
+            <p>Your one-stop boutique for premium hair, designer shoes, and luxury bags.</p>
+            <button class="btn-primary" onclick="document.getElementById('collection').scrollIntoView({behavior: 'smooth'})">
+                Shop Collection
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+        </section>
+
+        <section id="collection" class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Arrivals</h2>
+            </div>
+
+            <div class="grid">
+                <!-- Hair Product -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?q=80&w=800&auto=format&fit=crop" 
+                             alt="Bone Straight Hair" 
+                             class="card-img"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;\'>💇‍♀️</div>'">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Premium Hair</span>
+                        <h3 class="card-title">Bone Straight Vietnamese</h3>
+                        <div class="card-price">₦ 150,000</div>
+                        <button class="btn-card" 
+                                data-name="Bone Straight Vietnamese" 
+                                data-price="150000" 
+                                data-img="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?q=80&w=200&fit=crop">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Bag Product -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=800&auto=format&fit=crop" 
+                             alt="Luxury Bag" 
+                             class="card-img"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;\'>👜</div>'">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Accessories</span>
+                        <h3 class="card-title">Quilted Leather Bag</h3>
+                        <div class="card-price">₦ 85,000</div>
+                        <button class="btn-card" 
+                                data-name="Quilted Leather Bag" 
+                                data-price="85000" 
+                                data-img="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=200&fit=crop">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Shoe Product -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=800&auto=format&fit=crop" 
+                             alt="Designer Heels" 
+                             class="card-img"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;\'>👠</div>'">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Footwear</span>
+                        <h3 class="card-title">Royal Blue Stilettos</h3>
+                        <div class="card-price">₦ 65,000</div>
+                        <button class="btn-card" 
+                                data-name="Royal Blue Stilettos" 
+                                data-price="65000" 
+                                data-img="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=200&fit=crop">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Curly Hair Product -->
+                <div class="card">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?q=80&w=800&auto=format&fit=crop" 
+                             alt="Curly Wig" 
+                             class="card-img"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;\'>✨</div>'">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Wigs</span>
+                        <h3 class="card-title">Deep Curly Lace Front</h3>
+                        <div class="card-price">₦ 120,000</div>
+                        <button class="btn-card" 
+                                data-name="Deep Curly Lace Front" 
+                                data-price="120000" 
+                                data-img="https://images.unsplash.com/photo-1596451190630-186aff535bf2?q=80&w=200&fit=crop">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="location-section">
+            <div class="location-grid">
+                <div>
+                    <h2 style="font-size: 2rem; color: var(--text-main); margin-bottom: 20px;">Visit Our Boutique</h2>
+                    <p style="color: var(--text-muted);">Experience our curated collection of hair, shoes, and bags in person.</p>
+                </div>
+                <div class="address-box">
+                    <h3>Store Location</h3>
+                    <div class="address-line">
+                        <div class="address-icon">📍</div>
+                        <div>9 Adamo St, Oba Amusa Adebambo Ave, Lekki, Lagos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CHECKOUT VIEW (Hidden by default) -->
+    <section id="checkout-view" class="hidden">
+        <div class="btn-back" onclick="toggleView('shop')">
+            ← Back to Shopping
+        </div>
+        
+        <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 10px;">Secure Checkout</h1>
+        <p style="color: var(--text-muted);">Complete your purchase securely.</p>
+
+        <div class="checkout-grid">
+            <!-- Billing Form -->
+            <div class="checkout-form">
+                <h2>Billing Details</h2>
+                <form id="billing-form" onsubmit="handlePlaceOrder(event)">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="e.g. Sonita Johnson" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="e.g. hello@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="e.g. +234 800 000 0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Delivery Address</label>
+                        <input type="text" placeholder="Street address, Apartment, etc." required>
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <select required>
+                            <option value="">Select State</option>
+                            <option value="Lagos">Lagos</option>
+                            <option value="Abuja">Abuja</option>
+                            <option value="Port Harcourt">Port Harcourt</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-checkout">Pay Now</button>
+                </form>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div id="cart-items-container">
+                    <!-- Items injected via JS -->
+                    <p style="color: #888; text-align: center; padding: 20px;">Your cart is empty.</p>
+                </div>
+                <div class="total-row">
+                    <span>Total</span>
+                    <span id="cart-total">₦ 0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compact Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h4><div class="logo-mark" style="background:white; color:var(--primary); width:24px; height:24px; font-size:14px;">H</div> HAIRBY SONITA</h4>
+                <p style="font-size: 0.85rem; opacity: 0.9;">Luxury hair, shoes, and bags for the modern lifestyle.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h5>Shop</h5>
+                <ul><li>New Arrivals</li><li>Wigs & Hair</li><li>Shoes & Bags</li></ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul><li>About Us</li><li>Careers</li><li>Privacy</li></ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul><li>+234 800 123 4567</li><li>Lekki, Lagos</li></ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Hairby Sonita. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast">Added to cart</div>
+
+    <!-- JS Logic -->
+    <script>
+        // State
+        let cart = [];
+        const shopView = document.getElementById('shop-view');
+        const checkoutView = document.getElementById('checkout-view');
+        const cartCountEl = document.getElementById('cart-count');
+        const toast = document.getElementById('toast');
+
+        // Add to Cart Function
+        document.querySelectorAll('.btn-card').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const product = {
+                    name: this.getAttribute('data-name'),
+                    price: parseInt(this.getAttribute('data-price')),
+                    img: this.getAttribute('data-img')
+                };
+
+                cart.push(product);
+                updateCartUI();
+                showToast(`Added: ${product.name}`);
+                
+                // Button animation
+                const originalText = this.innerText;
+                this.innerText = "ADDED ✓";
+                this.style.background = "var(--primary)";
+                this.style.color = "white";
+                setTimeout(() => {
+                    this.innerText = originalText;
+                    this.style.background = "";
+                    this.style.color = "";
+                }, 1000);
+            });
+        });
+
+        function updateCartUI() {
+            cartCountEl.innerText = cart.length;
+        }
+
+        function showToast(msg) {
+            toast.innerText = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // Toggle Views
+        function toggleView(view) {
+            if (view === 'checkout') {
+                if (cart.length === 0) {
+                    showToast("Your cart is empty!");
+                    return;
+                }
+                shopView.classList.add('hidden');
+                checkoutView.classList.remove('hidden');
+                renderCheckout();
+                window.scrollTo(0,0);
+            } else {
+                checkoutView.classList.add('hidden');
+                shopView.classList.remove('hidden');
+                window.scrollTo(0,0);
+            }
+        }
+
+        // Render Checkout Summary
+        function renderCheckout() {
+            const container = document.getElementById('cart-items-container');
+            const totalEl = document.getElementById('cart-total');
+            container.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                total += item.price;
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/60?text=Item'">
+                    <div class="item-details">
+                        <h4>${item.name}</h4>
+                        <p>₦ ${item.price.toLocaleString()}</p>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+
+            totalEl.innerText = '₦ ' + total.toLocaleString();
+        }
+
+        // Handle Place Order
+        function handlePlaceOrder(e) {
+            e.preventDefault();
+            // Simulate processing
+            const btn = document.querySelector('.btn-checkout');
+            btn.innerText = "Processing...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                alert("Order Placed Successfully! We will contact you shortly.");
+                cart = [];
+                updateCartUI();
+                toggleView('shop');
+                btn.innerText = "Pay Now";
+                btn.disabled = false;
+                document.getElementById('billing-form').reset();
+            }, 1500);
+        }
+    </script>
 </body>
 </html>
+
+
